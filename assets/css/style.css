@@ -525,3 +525,127 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   .footer-note { flex-direction: column; align-items: flex-start; text-align: left; }
   .hero { padding: 64px 20px 44px; }
 }
+
+/* ---------- Flagship card (Portfolio Construction Lab) ----------
+ * Its own indigo identity so it reads apart from the cyan / magenta /
+ * amber category colours: an always-on cyan→indigo→magenta gradient
+ * border, an indigo-tinted surface glow and a "Flagship" badge. */
+.project-card.flagship {
+  --cat-color: #8b7bff;
+  border-color: transparent;
+  background:
+    radial-gradient(120% 140% at 0% 0%, rgba(139, 123, 255, 0.16), transparent 55%),
+    radial-gradient(90% 120% at 100% 100%, rgba(0, 240, 255, 0.09), transparent 60%),
+    linear-gradient(120deg, var(--surface-2) 0%, var(--surface-1) 75%);
+  box-shadow: 0 0 0 1px rgba(139, 123, 255, 0.12), 0 28px 70px -28px rgba(139, 123, 255, 0.55), var(--shadow-ambient);
+  padding: 34px 38px;
+}
+.project-card.flagship::before {
+  opacity: 1;
+  padding: 1.5px;
+  background: linear-gradient(120deg, #00f0ff, #8b7bff 45%, #ff2ec4);
+  background-size: 200% 200%;
+  animation: flagship-border 8s ease-in-out infinite;
+}
+@keyframes flagship-border {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-card.flagship::before { animation: none; }
+}
+.project-card.flagship:hover {
+  box-shadow: 0 0 0 1px rgba(139, 123, 255, 0.2), 0 32px 80px -24px rgba(139, 123, 255, 0.7), var(--shadow-ambient);
+}
+.project-card.flagship h3 {
+  font-size: 28px;
+  background: linear-gradient(90deg, #e6edf7 30%, #b9b0ff 75%, #00f0ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.project-card.flagship p { font-size: 13.5px; }
+
+.flagship-top { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.flagship-badge {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+  color: #0b0e15;
+  background: linear-gradient(90deg, #00f0ff, #8b7bff 55%, #ff2ec4);
+  box-shadow: 0 0 14px rgba(139, 123, 255, 0.55);
+}
+
+.flagship-flow {
+  list-style: none;
+  counter-reset: flow;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 2px 0 0;
+  padding: 0;
+}
+.flagship-flow li {
+  counter-increment: flow;
+  font-size: 11px;
+  color: var(--text-secondary);
+  padding: 5px 10px 5px 8px;
+  border: 1px solid rgba(139, 123, 255, 0.28);
+  background: rgba(139, 123, 255, 0.07);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.flagship-flow li::before {
+  content: counter(flow, decimal-leading-zero);
+  font-family: var(--mono);
+  font-size: 10px;
+  color: #b9b0ff;
+}
+
+.project-card.flagship .flagship-side { width: 250px; align-items: stretch; }
+.flagship-viz { width: 100%; height: auto; }
+.flagship-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+.flagship-stats div {
+  font-size: 10px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  background: rgba(139, 123, 255, 0.06);
+  border: 1px solid rgba(139, 123, 255, 0.18);
+  border-radius: 6px;
+  padding: 7px 9px;
+}
+.flagship-stats span {
+  display: block;
+  font-family: var(--mono);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: 0;
+  text-transform: none;
+}
+.flagship-side .btn.primary { text-align: center; }
+.flagship-side .live-badge { align-self: flex-end; }
+@media (max-width: 760px) {
+  .project-card.flagship { padding: 26px 22px; }
+  .project-card.flagship .flagship-side { width: 100%; }
+  .project-card.flagship h3 { font-size: 24px; }
+}
+.flagship-viz { max-width: 260px; align-self: center; }
+@media (max-width: 760px) {
+  .project-card.flagship .flagship-side { display: grid; grid-template-columns: minmax(0, 220px) 1fr; gap: 12px; align-items: center; }
+  .flagship-side .btn.primary, .flagship-side .live-badge { grid-column: 1 / -1; }
+  .flagship-side .live-badge { justify-self: start; }
+}
+@media (max-width: 480px) {
+  .project-card.flagship .flagship-side { grid-template-columns: 1fr; }
+}
