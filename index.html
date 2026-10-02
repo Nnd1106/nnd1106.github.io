@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Niranjan Desai — Finance &amp; Analytics</title>
-<meta name="description" content="Niranjan Desai — MBA Finance, equity research background. Eight interactive analytics tools: portfolio risk management, equity valuation, market simulation, live equity research report generation, an adaptive mock interview simulator, a business simulation game, a strategic crisis scenario simulator, and an HR attrition analytics dashboard." />
+<meta name="description" content="Niranjan Desai — MBA Finance, equity research background. Seven interactive tools across equity valuation &amp; risk, strategy simulation, and career prep — DCF models, portfolio risk dashboards, and market simulators built with vanilla HTML/CSS/JS." />
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%2305070b'/%3E%3Cpath d='M20 70 L40 40 L55 55 L80 25' stroke='%2300f0ff' stroke-width='8' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E" />
 <link rel="stylesheet" href="assets/css/style.css" />
 </head>
@@ -27,185 +27,239 @@
     <p class="tagline">MBA Finance · Equity Research</p>
     <p class="bio">
       MBA in Finance with a background in equity research at a leading credit rating and
-      research institution. I build interactive
-      analytics tools that combine markets and business domain expertise with hands-on
-      software development — an eight-project portfolio spanning portfolio risk dashboards,
-      company valuation models, market simulation, live equity research report generation,
-      an adaptive mock interview simulator, a business simulation game, a strategic
-      crisis scenario simulator, and an HR attrition analytics dashboard.
+      research institution. I build interactive analytics tools that combine markets and
+      business domain expertise with hands-on software development — a seven-tool portfolio
+      spanning equity valuation &amp; risk, strategy simulation, and career-prep.
     </p>
+
+    <div class="hero-stats">
+      <div class="stat">
+        <span class="stat-value">7</span>
+        <span class="stat-label">Live Tools</span>
+      </div>
+      <span class="stat-divider" aria-hidden="true"></span>
+      <div class="stat">
+        <span class="stat-value">3</span>
+        <span class="stat-label">Focus Areas</span>
+      </div>
+      <span class="stat-divider" aria-hidden="true"></span>
+      <div class="stat">
+        <span class="stat-value">100%</span>
+        <span class="stat-label">Client-Side</span>
+      </div>
+    </div>
+
     <div class="hero-links">
       <a class="btn primary" href="#projects">View projects</a>
       <a class="btn" href="https://github.com/Nnd1106" target="_blank" rel="noopener">GitHub</a>
       <a class="btn" href="mailto:mr.niranjandesai@gmail.com">Email</a>
     </div>
+
+    <div class="category-pills">
+      <a class="pill pill-finance" href="#finance">Finance &amp; Valuation</a>
+      <a class="pill pill-strategy" href="#strategy">Strategy &amp; Simulation</a>
+      <a class="pill pill-career" href="#career">Career Tools</a>
+    </div>
   </section>
 
   <section class="section" id="projects">
     <h2 class="section-title">Projects</h2>
-    <div class="project-grid">
 
-      <article class="project-card">
-        <div class="project-kicker">Portfolio Risk</div>
-        <h3>Risk Command Center</h3>
-        <p>
-          An interactive portfolio risk management dashboard built around a sample Nifty 50
-          equity book: a VaR calculator (historical simulation + parametric methods, adjustable
-          confidence and horizon), a Monte Carlo simulator with 1,000+ simulated portfolio
-          paths, and stress-test scenarios for market crashes, rate shocks, and volatility
-          spikes — with an optional live NSE price overlay.
-        </p>
-        <div class="tag-row">
-          <span class="tag">VaR</span>
-          <span class="tag">Monte Carlo</span>
-          <span class="tag">Stress Testing</span>
-          <span class="tag">Chart.js</span>
-        </div>
-        <div class="card-footer">
-          <a class="btn primary" href="https://nnd1106.github.io/risk-command-center/" target="_blank" rel="noopener">Open dashboard →</a>
-          <span class="live-badge">LIVE</span>
-        </div>
-      </article>
+    <div class="category-group cat-finance" id="finance">
+      <h3 class="category-heading">
+        <span class="cat-dot" aria-hidden="true"></span>
+        Finance &amp; Valuation
+        <span class="category-count">04</span>
+      </h3>
+      <div class="project-grid">
 
-      <article class="project-card">
-        <div class="project-kicker">Equity Valuation</div>
-        <h3>Valuation Command Center</h3>
-        <p>
-          A DCF and relative-valuation dashboard that works for any ticker — global or Indian,
-          not hardcoded to one company. A two-stage DCF with a WACC × terminal-growth
-          sensitivity heatmap, peer-based relative valuation with a P/E vs EV/EBITDA scatter,
-          a sell-side-style football field summarizing valuation ranges across methods, and
-          bull/base/bear scenario presets.
-        </p>
-        <div class="tag-row">
-          <span class="tag">DCF</span>
-          <span class="tag">Relative Valuation</span>
-          <span class="tag">Football Field</span>
-          <span class="tag">Chart.js</span>
-        </div>
-        <div class="card-footer">
-          <a class="btn primary" href="https://nnd1106.github.io/valuation-command-center/" target="_blank" rel="noopener">Open dashboard →</a>
-          <span class="live-badge">LIVE</span>
-        </div>
-      </article>
+        <article class="project-card featured">
+          <div class="featured-main">
+            <div class="project-kicker">Equity Valuation · Featured</div>
+            <h3>Valuation Command Center</h3>
+            <p>
+              A DCF and relative-valuation dashboard that works for any ticker — global or Indian,
+              not hardcoded to one company. A two-stage DCF with a WACC × terminal-growth
+              sensitivity heatmap, peer-based relative valuation with a P/E vs EV/EBITDA scatter,
+              a sell-side-style football field summarizing valuation ranges across methods, and
+              bull/base/bear scenario presets.
+            </p>
+            <div class="tag-row">
+              <span class="tag">DCF</span>
+              <span class="tag">Relative Valuation</span>
+              <span class="tag">Football Field</span>
+              <span class="tag">Chart.js</span>
+            </div>
+          </div>
+          <div class="featured-cta">
+            <a class="btn primary" href="https://nnd1106.github.io/valuation-command-center/" target="_blank" rel="noopener">Open dashboard →</a>
+            <span class="live-badge">LIVE</span>
+          </div>
+        </article>
 
-      <article class="project-card">
-        <div class="project-kicker">Market Simulation</div>
-        <h3>Market Simulator</h3>
-        <p>
-          An interactive game: trade a portfolio through real historical market history —
-          the 2008 financial crisis, the 2020 COVID crash and recovery, or a calm 2017 bull
-          year — using real daily closing prices, not synthetic data. Buy, sell, and
-          rebalance as the scenario plays out, then get a results screen with your return
-          vs. the benchmark, Sharpe ratio, max drawdown, and a risk-personality read on how
-          you actually traded through the drawdown.
-        </p>
-        <div class="tag-row">
-          <span class="tag">Historical Data</span>
-          <span class="tag">Sharpe Ratio</span>
-          <span class="tag">Risk Personality</span>
-          <span class="tag">Chart.js</span>
-        </div>
-        <div class="card-footer">
-          <a class="btn primary" href="https://nnd1106.github.io/market-simulator/" target="_blank" rel="noopener">Play the game →</a>
-          <span class="live-badge">LIVE</span>
-        </div>
-      </article>
+        <article class="project-card">
+          <div class="project-kicker">Portfolio Risk</div>
+          <h3>Risk Command Center</h3>
+          <p>
+            An interactive portfolio risk management dashboard built around a sample Nifty 50
+            equity book: a VaR calculator (historical simulation + parametric methods, adjustable
+            confidence and horizon), a Monte Carlo simulator with 1,000+ simulated portfolio
+            paths, and stress-test scenarios for market crashes, rate shocks, and volatility
+            spikes — with an optional live NSE price overlay.
+          </p>
+          <div class="tag-row">
+            <span class="tag">VaR</span>
+            <span class="tag">Monte Carlo</span>
+            <span class="tag">Stress Testing</span>
+            <span class="tag">Chart.js</span>
+          </div>
+          <div class="card-footer">
+            <a class="btn primary" href="https://nnd1106.github.io/risk-command-center/" target="_blank" rel="noopener">Open dashboard →</a>
+            <span class="live-badge">LIVE</span>
+          </div>
+        </article>
 
-      <article class="project-card">
-        <div class="project-kicker">Equity Research</div>
-        <h3>Company Deep Dive</h3>
-        <p>
-          A live equity research report generator for any ticker — global or Indian, not
-          hardcoded. Type a symbol and watch a report build section by section: business
-          overview, financial trends, DCF and relative valuation with adjustable growth/WACC
-          assumptions, volatility and drawdown risk flags, and a rule-based analyst summary
-          that only ever references numbers computed elsewhere on the page — no fabricated
-          commentary.
-        </p>
-        <div class="tag-row">
-          <span class="tag">DCF</span>
-          <span class="tag">Financial Trends</span>
-          <span class="tag">Risk Flags</span>
-          <span class="tag">Rule-Based Narrative</span>
-        </div>
-        <div class="card-footer">
-          <a class="btn primary" href="https://nnd1106.github.io/company-deep-dive/" target="_blank" rel="noopener">Open report generator →</a>
-          <span class="live-badge">LIVE</span>
-        </div>
-      </article>
+        <article class="project-card">
+          <div class="project-kicker">Equity Research</div>
+          <h3>Company Deep Dive</h3>
+          <p>
+            A live equity research report generator for any ticker — global or Indian, not
+            hardcoded. Type a symbol and watch a report build section by section: business
+            overview, financial trends, DCF and relative valuation with adjustable growth/WACC
+            assumptions, volatility and drawdown risk flags, and a rule-based analyst summary
+            that only ever references numbers computed elsewhere on the page — no fabricated
+            commentary.
+          </p>
+          <div class="tag-row">
+            <span class="tag">DCF</span>
+            <span class="tag">Financial Trends</span>
+            <span class="tag">Risk Flags</span>
+            <span class="tag">Rule-Based Narrative</span>
+          </div>
+          <div class="card-footer">
+            <a class="btn primary" href="https://nnd1106.github.io/company-deep-dive/" target="_blank" rel="noopener">Open report generator →</a>
+            <span class="live-badge">LIVE</span>
+          </div>
+        </article>
 
-      <article class="project-card">
-        <div class="project-kicker">Interview Prep</div>
-        <h3>Interview Command Center</h3>
-        <p>
-          An adaptive mock interview simulator for any finance-adjacent role — not a fixed
-          list. Type in what you're preparing for and run a live 3-round interview (technical
-          foundations, applied/case, HR behavioral) with AI-generated questions tailored to
-          that exact role, adaptive follow-ups that dig into what you actually said, and
-          structured feedback. Nothing is ever saved — no resume upload, no server, no
-          database, session data lives only in the browser tab.
-        </p>
-        <div class="tag-row">
-          <span class="tag">Adaptive Follow-Ups</span>
-          <span class="tag">Structured Feedback</span>
-          <span class="tag">Gemini API</span>
-          <span class="tag">Zero Data Storage</span>
-        </div>
-        <div class="card-footer">
-          <a class="btn primary" href="https://nnd1106.github.io/interview-command-center/" target="_blank" rel="noopener">Start mock interview →</a>
-          <span class="live-badge">LIVE</span>
-        </div>
-      </article>
+        <article class="project-card">
+          <div class="project-kicker">Market Simulation</div>
+          <h3>Market Simulator</h3>
+          <p>
+            An interactive game: trade a portfolio through real historical market history —
+            the 2008 financial crisis, the 2020 COVID crash and recovery, or a calm 2017 bull
+            year — using real daily closing prices, not synthetic data. Buy, sell, and
+            rebalance as the scenario plays out, then get a results screen with your return
+            vs. the benchmark, Sharpe ratio, max drawdown, and a risk-personality read on how
+            you actually traded through the drawdown.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Historical Data</span>
+            <span class="tag">Sharpe Ratio</span>
+            <span class="tag">Risk Personality</span>
+            <span class="tag">Chart.js</span>
+          </div>
+          <div class="card-footer">
+            <a class="btn primary" href="https://nnd1106.github.io/market-simulator/" target="_blank" rel="noopener">Play the game →</a>
+            <span class="live-badge">LIVE</span>
+          </div>
+        </article>
 
-      <article class="project-card">
-        <div class="project-kicker">Business Simulation</div>
-        <h3>Build Your Own Company</h3>
-        <p>
-          A business simulation game: start with ₹50 lakh, pick an industry — SaaS, Fintech,
-          Manufacturing, Restaurant, or Retail — and run the company for 5–10 years through
-          pricing, hiring, marketing, debt, capex, and expansion decisions. Every choice flows
-          through a real income statement, cash flow statement, and balance sheet, with
-          weighted random events and a final valuation (EV/EBITDA + DCF) with the math shown,
-          not just a number.
-        </p>
-        <div class="tag-row">
-          <span class="tag">Financial Modeling</span>
-          <span class="tag">5 Industries</span>
-          <span class="tag">EV/EBITDA + DCF</span>
-          <span class="tag">Chart.js</span>
-        </div>
-        <div class="card-footer">
-          <a class="btn primary" href="https://nnd1106.github.io/build-your-company/" target="_blank" rel="noopener">Build a company →</a>
-          <span class="live-badge">LIVE</span>
-        </div>
-      </article>
-
-      <article class="project-card">
-        <div class="project-kicker">Strategy Simulation</div>
-        <h3>STRATLAB</h3>
-        <p>
-          A strategy-consulting simulator: pick an industry and a historical crisis — the 2008
-          financial crisis, a Strait of Hormuz closure, the 1929 Depression, a pandemic shock,
-          the 1973 oil embargo, or a trade war — get a briefing built from PESTEL, Porter's
-          Five Forces, and SWOT, then run four rounds of cross-functional decisions across
-          Marketing, Operations, HR, and Finance. A live radar/trend scorecard and a
-          procedurally generated situation-report ticker track what your choices actually did,
-          and a closing debrief reads your pattern against the BCG growth-share matrix.
-        </p>
-        <div class="tag-row">
-          <span class="tag">PESTEL</span>
-          <span class="tag">Porter's Five Forces</span>
-          <span class="tag">SWOT / BCG</span>
-          <span class="tag">Chart.js</span>
-        </div>
-        <div class="card-footer">
-          <a class="btn primary" href="https://nnd1106.github.io/strat-lab/" target="_blank" rel="noopener">Enter the war room →</a>
-          <span class="live-badge">LIVE</span>
-        </div>
-      </article>
-
+      </div>
     </div>
+
+    <div class="category-group cat-strategy" id="strategy">
+      <h3 class="category-heading">
+        <span class="cat-dot" aria-hidden="true"></span>
+        Strategy &amp; Simulation
+        <span class="category-count">02</span>
+      </h3>
+      <div class="project-grid">
+
+        <article class="project-card">
+          <div class="project-kicker">Strategy Simulation</div>
+          <h3>STRATLAB</h3>
+          <p>
+            A strategy-consulting simulator: pick an industry and a historical crisis — the 2008
+            financial crisis, a Strait of Hormuz closure, the 1929 Depression, a pandemic shock,
+            the 1973 oil embargo, or a trade war — get a briefing built from PESTEL, Porter's
+            Five Forces, and SWOT, then run four rounds of cross-functional decisions across
+            Marketing, Operations, HR, and Finance. A live radar/trend scorecard and a
+            procedurally generated situation-report ticker track what your choices actually did,
+            and a closing debrief reads your pattern against the BCG growth-share matrix.
+          </p>
+          <div class="tag-row">
+            <span class="tag">PESTEL</span>
+            <span class="tag">Porter's Five Forces</span>
+            <span class="tag">SWOT / BCG</span>
+            <span class="tag">Chart.js</span>
+          </div>
+          <div class="card-footer">
+            <a class="btn primary" href="https://nnd1106.github.io/strat-lab/" target="_blank" rel="noopener">Enter the war room →</a>
+            <span class="live-badge">LIVE</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-kicker">Business Simulation</div>
+          <h3>Build Your Own Company</h3>
+          <p>
+            A business simulation game: start with ₹50 lakh, pick an industry — SaaS, Fintech,
+            Manufacturing, Restaurant, or Retail — and run the company for 5–10 years through
+            pricing, hiring, marketing, debt, capex, and expansion decisions. Every choice flows
+            through a real income statement, cash flow statement, and balance sheet, with
+            weighted random events and a final valuation (EV/EBITDA + DCF) with the math shown,
+            not just a number.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Financial Modeling</span>
+            <span class="tag">5 Industries</span>
+            <span class="tag">EV/EBITDA + DCF</span>
+            <span class="tag">Chart.js</span>
+          </div>
+          <div class="card-footer">
+            <a class="btn primary" href="https://nnd1106.github.io/build-your-company/" target="_blank" rel="noopener">Build a company →</a>
+            <span class="live-badge">LIVE</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <div class="category-group cat-career" id="career">
+      <h3 class="category-heading">
+        <span class="cat-dot" aria-hidden="true"></span>
+        Career Tools
+        <span class="category-count">01</span>
+      </h3>
+      <div class="project-grid single">
+
+        <article class="project-card">
+          <div class="project-kicker">Interview Prep</div>
+          <h3>Interview Command Center</h3>
+          <p>
+            An adaptive mock interview simulator for any finance-adjacent role — not a fixed
+            list. Type in what you're preparing for and run a live 3-round interview (technical
+            foundations, applied/case, HR behavioral) with AI-generated questions tailored to
+            that exact role, adaptive follow-ups that dig into what you actually said, and
+            structured feedback. Nothing is ever saved — no resume upload, no server, no
+            database, session data lives only in the browser tab.
+          </p>
+          <div class="tag-row">
+            <span class="tag">Adaptive Follow-Ups</span>
+            <span class="tag">Structured Feedback</span>
+            <span class="tag">Gemini API</span>
+            <span class="tag">Zero Data Storage</span>
+          </div>
+          <div class="card-footer">
+            <a class="btn primary" href="https://nnd1106.github.io/interview-command-center/" target="_blank" rel="noopener">Start mock interview →</a>
+            <span class="live-badge">LIVE</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
   </section>
 
 </main>

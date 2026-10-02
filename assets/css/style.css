@@ -17,6 +17,7 @@
   --accent-cyan: #00f0ff;
   --accent-magenta: #ff2ec4;
   --accent-indigo: #6e7bff;
+  --accent-amber: #ffb347;
   --up: #0ca30c;
   --focus-ring: rgba(0, 240, 255, 0.55);
   --shadow-ambient: 0 20px 60px -20px rgba(0, 0, 0, 0.6);
@@ -203,7 +204,58 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   margin: 0 auto 30px;
 }
 
+.hero-stats {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  margin: 4px 0 32px;
+  flex-wrap: wrap;
+}
+.hero-stats .stat { display: flex; flex-direction: column; align-items: center; gap: 3px; }
+.hero-stats .stat-value {
+  font-family: var(--mono);
+  font-size: 22px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #ffffff 30%, var(--accent-cyan));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero-stats .stat-label {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+.hero-stats .stat-divider { width: 1px; height: 26px; background: var(--border-soft); }
+
 .hero-links { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+
+.category-pills {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+.pill {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 7px 15px;
+  border-radius: 999px;
+  border: 1px solid var(--border-soft);
+  color: var(--text-secondary);
+  letter-spacing: 0.02em;
+  transition: all 0.15s ease;
+}
+.pill:hover { text-decoration: none; transform: translateY(-1px); }
+.pill-finance { border-color: rgba(0, 240, 255, 0.3); }
+.pill-finance:hover { background: rgba(0, 240, 255, 0.08); color: var(--accent-cyan); border-color: var(--accent-cyan); }
+.pill-strategy { border-color: rgba(255, 46, 196, 0.3); }
+.pill-strategy:hover { background: rgba(255, 46, 196, 0.08); color: var(--accent-magenta); border-color: var(--accent-magenta); }
+.pill-career { border-color: rgba(255, 179, 71, 0.3); }
+.pill-career:hover { background: rgba(255, 179, 71, 0.08); color: var(--accent-amber); border-color: var(--accent-amber); }
 
 .btn {
   display: inline-flex;
@@ -267,12 +319,55 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   background: linear-gradient(90deg, var(--border-soft), transparent);
 }
 
+/* ---------- Category groups ---------- */
+.category-group { --cat-color: var(--accent-cyan); }
+.category-group.cat-finance { --cat-color: var(--accent-cyan); }
+.category-group.cat-strategy { --cat-color: var(--accent-magenta); }
+.category-group.cat-career { --cat-color: var(--accent-amber); }
+
+.category-group + .category-group { margin-top: 44px; }
+
+.category-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-secondary);
+  margin: 0 0 20px;
+}
+.category-heading .cat-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--cat-color);
+  box-shadow: 0 0 8px 2px var(--cat-color);
+  flex-shrink: 0;
+}
+.category-heading::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, var(--cat-color), transparent 70%);
+  opacity: 0.4;
+}
+.category-count {
+  font-family: var(--mono);
+  font-weight: 400;
+  letter-spacing: 0;
+  color: var(--text-muted);
+  font-size: 11px;
+}
+
 /* ---------- Project cards ---------- */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 22px;
 }
+.project-grid.single { grid-template-columns: minmax(320px, 640px); justify-content: start; }
 
 .project-card {
   position: relative;
@@ -293,7 +388,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   inset: 0;
   border-radius: 12px;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(0, 240, 255, 0.35), transparent 40%);
+  background: linear-gradient(135deg, color-mix(in srgb, var(--cat-color, var(--accent-cyan)) 55%, transparent), transparent 40%);
   -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -305,7 +400,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 .project-card:hover {
   border-color: transparent;
   transform: translateY(-4px);
-  box-shadow: 0 24px 48px -18px rgba(0, 240, 255, 0.22), var(--shadow-ambient);
+  box-shadow: 0 24px 48px -18px color-mix(in srgb, var(--cat-color, var(--accent-cyan)) 45%, transparent), var(--shadow-ambient);
 }
 .project-card:hover::before { opacity: 1; }
 
@@ -314,7 +409,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: var(--accent-cyan);
+  color: var(--cat-color, var(--accent-cyan));
   display: flex;
   align-items: center;
   gap: 7px;
@@ -323,8 +418,8 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
   content: '';
   width: 6px;
   height: 6px;
-  background: var(--accent-cyan);
-  box-shadow: 0 0 6px 1px var(--accent-cyan);
+  background: var(--cat-color, var(--accent-cyan));
+  box-shadow: 0 0 6px 1px var(--cat-color, var(--accent-cyan));
   border-radius: 1px;
 }
 
@@ -347,12 +442,42 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 .tag {
   font-size: 10px;
   padding: 4px 10px;
-  background: rgba(0, 240, 255, 0.05);
-  border: 1px solid var(--border-soft);
+  background: color-mix(in srgb, var(--cat-color, var(--accent-cyan)) 6%, transparent);
+  border: 1px solid color-mix(in srgb, var(--cat-color, var(--accent-cyan)) 22%, var(--border-soft));
   color: var(--text-muted);
   border-radius: 5px;
   font-family: var(--mono);
   letter-spacing: 0.01em;
+}
+
+/* ---------- Featured card ---------- */
+.project-card.featured {
+  grid-column: 1 / -1;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 30px 34px;
+  background: linear-gradient(120deg, var(--surface-2) 0%, var(--surface-1) 70%);
+}
+.project-card.featured .featured-main {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  flex: 1;
+  min-width: 0;
+}
+.project-card.featured h3 { font-size: 24px; }
+.project-card.featured .featured-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  flex-shrink: 0;
+}
+@media (max-width: 760px) {
+  .project-card.featured { flex-direction: column; align-items: stretch; padding: 24px 26px; }
+  .project-card.featured .featured-cta { align-items: flex-start; }
 }
 
 .project-card .card-footer {
